@@ -1,9 +1,14 @@
 import React from "react";
+import UserCollectionStats from "../components/UserCollectionStats";
 
 import "./UserCards.css";
 
 function UserCards(props) {
-	return <h2>{props.user}'s Cards</h2>;
+	return (
+		<React.Fragment>
+			<UserCollectionStats user={props.user} />
+		</React.Fragment>
+	);
 }
 
 export default UserCards;
