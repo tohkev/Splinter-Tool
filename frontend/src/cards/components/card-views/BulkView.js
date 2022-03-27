@@ -61,22 +61,24 @@ function BulkView(props) {
 	});
 
 	return (
-		<table className="bulk-view">
-			<thead>
-				<tr>
-					<th>Select</th>
-					<th>Card Name</th>
-					<th>Details</th>
-					<th>Level</th>
-					<th>BCX</th>
-					<th>CP</th>
-					<th>Owner</th>
-					<th>Delegated/Rented To</th>
-					<th>Listed Price</th>
-				</tr>
-			</thead>
-			<tbody>{bulkItemList}</tbody>
-		</table>
+		<main className="card-list section-block">
+			<table className="bulk-view">
+				<thead>
+					<tr>
+						<th>Select</th>
+						<th>Card Name</th>
+						<th>Details</th>
+						<th>Level</th>
+						<th>BCX</th>
+						<th>CP</th>
+						<th>Owner</th>
+						<th>Delegated/Rented To</th>
+						<th>Listed Price</th>
+					</tr>
+				</thead>
+				<tbody>{bulkItemList}</tbody>
+			</table>
+		</main>
 	);
 }
 

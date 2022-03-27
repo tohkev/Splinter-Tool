@@ -45,6 +45,11 @@ tr > td {
 	margin-left: 0.4rem;
 }
 
-.bulk-view__card-img {
+.bulk-view__image-container {
 	height: 2.5rem;
+	overflow: hidden;
+}
+
+.bulk-view__card-img {
+	height: 3.5rem;
 }

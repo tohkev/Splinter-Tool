@@ -7,11 +7,13 @@ function BulkViewItem(props) {
 				<input type="checkbox" name="card-selected" />
 			</td>
 			<td className="bulk-view__card-name">
-				<img
-					src={props.image}
-					alt={props.name}
-					className="bulk-view__card-img"
-				/>
+				<div className="bulk-view__image-container">
+					<img
+						src={props.image}
+						alt={props.name}
+						className="bulk-view__card-img"
+					/>
+				</div>
 				<div className="bulk-view__card-info">
 					<p>{props.name}</p>
 					<p>{props.cardId}</p>
