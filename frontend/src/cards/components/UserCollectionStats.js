@@ -4,7 +4,7 @@ import "./UserCollectionStats.css";
 
 function UserCollectionStats(props) {
 	return (
-		<section className="user-stats__block">
+		<section className="user-stats__block section-block">
 			<div className="user-stats__info">
 				<h2 className="user-stats__title">
 					@{props.user}'s Collection Stats
