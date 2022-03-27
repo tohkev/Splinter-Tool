@@ -26,21 +26,21 @@ function UserCollectionStats(props) {
 							name="view-mode"
 							id="bulk"
 						/>
-						<label for="bulk">Bulk</label>
+						<label htmlFor="bulk">Bulk</label>
 						<input
 							type="radio"
 							name="view-mode"
 							id="grid"
 							value="grid"
 						/>
-						<label for="grid">Grid</label>
+						<label htmlFor="grid">Grid</label>
 						<input
 							type="radio"
 							name="view-mode"
 							id="list"
 							value="list"
 						/>
-						<label for="list">List</label>
+						<label htmlFor="list">List</label>
 					</div>
 				</div>
 				<button className="refresh-btn">R</button>
