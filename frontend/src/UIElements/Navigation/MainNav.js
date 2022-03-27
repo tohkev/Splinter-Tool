@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import NavLinks from "./NavLinks.js";
 import "./MainNav.css";
@@ -7,7 +8,9 @@ function MainNav() {
 	return (
 		<React.Fragment>
 			<header className="main-header">
-				<h1 className="main-navigation__title">SplinterTool</h1>
+				<h1 className="main-navigation__logo">
+					<Link to="/">SplinterTool</Link>
+				</h1>
 				<nav className="main-navigation__header-nav">
 					<NavLinks />
 				</nav>
