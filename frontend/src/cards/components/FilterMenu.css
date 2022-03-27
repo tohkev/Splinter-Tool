@@ -1,0 +1,63 @@
+.filter-menu {
+	width: 16%;
+}
+
+.filter-menu label {
+	margin-top: 0.25rem;
+}
+
+.filter-menu input[type="text"],
+input[type="number"] {
+	margin-left: 0.5rem;
+	border: none;
+	padding: 0.25rem;
+	width: 100%;
+}
+
+.filter-menu input:focus {
+	outline: none;
+}
+
+.filter-menu__heading {
+	margin-bottom: 0.5rem;
+}
+
+.filter-menu__section {
+	padding: 1.5rem 1.5rem;
+	border-bottom: 2px solid rgb(238, 238, 238);
+}
+
+.filter-menu__text-field {
+	border-bottom: 2px solid rgb(211, 211, 211);
+}
+
+.filter-menu__text-field:focus-within {
+	border-bottom: 2px solid rgb(2, 97, 2);
+}
+
+.filter-menu__by-term {
+	display: flex;
+	margin-bottom: 0.75rem;
+}
+
+.filter-menu__by-cp {
+	display: flex;
+}
+
+.filter-menu__min-cp,
+.filter-menu__max-cp {
+	display: flex;
+}
+
+.filter-menu__min-cp {
+	margin-right: 0.5rem;
+}
+
+.filter-inputs__criteria {
+	display: flex;
+	justify-content: space-between;
+}
+
+.filter-inputs__selection {
+	display: flex;
+}
