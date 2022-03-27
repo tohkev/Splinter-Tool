@@ -17,8 +17,19 @@
 
 .nav-links li:hover,
 .nav-links li:active,
-.nav-links li.active {
+.nav-links li.active,
+.nav-links li a:hover,
+.nav-links li a:active,
+.nav-links li a.active {
 	color: rgb(59, 59, 59);
+}
+
+.nav-links a {
+	text-decoration: none;
+}
+
+.nav-links a:visited {
+	color: inherit;
 }
 
 .nav-links__left {
