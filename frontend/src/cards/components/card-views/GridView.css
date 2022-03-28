@@ -1,0 +1,66 @@
+.grid-view {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+.grid-view-item {
+	height: 16rem;
+	width: 24rem;
+}
+
+.grid-view-item__heading {
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5rem;
+}
+
+.grid-view-item__main {
+	display: flex;
+	justify-content: space-between;
+	padding: 0.25rem 0.5rem 0.75rem;
+	text-align: center;
+	height: 85%;
+}
+
+.grid-view-item__card-info {
+	padding: 0.5rem 1rem;
+	width: 70%;
+	margin-left: 0.5rem;
+	letter-spacing: 0.01rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.grid-view-item__img {
+	display: block;
+	height: 100%;
+}
+
+.grid-view-item__count {
+	font-size: 1.25rem;
+	font-weight: 700;
+}
+
+.grid-view-item__data {
+	margin: 0.25rem 0;
+}
+
+.grid-view-item__details-btn {
+	width: 60%;
+	background-color: rgb(153, 0, 0);
+	color: white;
+	font-size: 0.85rem;
+	font-weight: 600;
+	padding: 0.5rem 0;
+	align-self: center;
+	margin-top: 0.5rem;
+	border: none;
+	cursor: pointer;
+}
+
+.grid-view-item__details-btn:hover {
+	background-color: rgb(90, 0, 0);
+}
