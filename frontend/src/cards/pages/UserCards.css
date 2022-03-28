@@ -1,4 +1,5 @@
 .user-cards__library {
 	display: flex;
-	justify-content: space-evenly;
+	margin: 0 1rem;
+	justify-content: space-between;
 }
