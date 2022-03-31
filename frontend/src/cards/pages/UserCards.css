@@ -1,5 +1,38 @@
+.user-cards {
+	margin: 0 1rem;
+}
+
 .user-cards__library {
 	display: flex;
-	margin: 0 1rem;
 	justify-content: space-between;
+}
+
+.filter-menu-block {
+	width: 17%;
+	align-self: flex-start;
+	position: sticky;
+	top: 60px;
+	height: 100vh;
+	overflow: scroll;
+	box-shadow: 0 5px 6px rgba(0, 0, 0, 0.26);
+}
+
+.card-list-block {
+	width: 82.5%;
+}
+
+@media (max-width: 1024px) {
+	.user-cards__library {
+		flex-direction: column;
+	}
+	.filter-menu-block {
+		width: 100%;
+		position: static;
+		overflow: auto;
+		height: auto;
+	}
+	.card-list-block {
+		width: 100%;
+		margin-top: 1rem;
+	}
 }

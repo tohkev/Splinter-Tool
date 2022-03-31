@@ -1,4 +1,5 @@
 import React from "react";
+import { Col, Row } from "react-bootstrap";
 
 import UserCollectionStats from "../components/UserCollectionStats";
 import FilterMenu from "../components/FilterMenu";
@@ -8,13 +9,16 @@ import "./UserCards.css";
 
 function UserCards(props) {
 	return (
-		<React.Fragment>
-			<UserCollectionStats user={props.user} />
+		<main className="user-cards">
 			<div className="user-cards__library">
-				<FilterMenu />
-				<CardList />
+				<div className="filter-menu-block">
+					<FilterMenu />
+				</div>
+				<div className="card-list-block">
+					<CardList />
+				</div>
 			</div>
-		</React.Fragment>
+		</main>
 	);
 }
 
