@@ -1,13 +1,16 @@
 .grid-view {
 	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
 	flex-wrap: wrap;
 }
 
+.filler {
+	flex-grow: 100;
+}
+
 .grid-view-item {
-	height: 16rem;
-	width: 24rem;
+	flex: 1;
+	margin: 0 0.65rem 1.3rem;
+	min-width: 23.6%;
 }
 
 .grid-view-item__heading {
@@ -16,51 +19,97 @@
 	padding: 0.5rem;
 }
 
-.grid-view-item__main {
-	display: flex;
-	justify-content: space-between;
-	padding: 0.25rem 0.5rem 0.75rem;
-	text-align: center;
-	height: 85%;
+.grid-view-item__heading h3 {
+	font-size: 1.1rem;
 }
 
-.grid-view-item__card-info {
-	padding: 0.5rem 1rem;
-	width: 70%;
-	margin-left: 0.5rem;
-	letter-spacing: 0.01rem;
+.grid-view-item__heading p {
+	margin: 0;
+}
+
+.grid-view-item__main {
 	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
+}
+
+.grid-view-item__image_container {
+	display: flex;
+	width: 40%;
+	padding: 0.5rem;
 }
 
 .grid-view-item__img {
-	display: block;
+	width: 100%;
+}
+
+.grid-view-item__card-info {
+	width: 60%;
+	padding: 0.5rem;
+}
+
+.grid-view-item__card-info p {
+	font-size: 0.9rem;
+	margin: 0;
+}
+
+.grid-view-item_card-info_container {
+	width: 100%;
 	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	text-align: center;
 }
 
-.grid-view-item__count {
-	font-size: 1.25rem;
-	font-weight: 700;
-}
-
-.grid-view-item__data {
-	margin: 0.25rem 0;
+.grid-view-item__category {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	width: 80%;
 }
 
 .grid-view-item__details-btn {
-	width: 60%;
+	width: 50%;
 	background-color: rgb(153, 0, 0);
 	color: white;
 	font-size: 0.85rem;
 	font-weight: 600;
 	padding: 0.5rem 0;
-	align-self: center;
-	margin-top: 0.5rem;
 	border: none;
 	cursor: pointer;
+	border-radius: 4px;
 }
 
-.grid-view-item__details-btn:hover {
-	background-color: rgb(90, 0, 0);
+@media (max-width: 1440px) {
+	.grid-view-item {
+		min-width: 32%;
+		margin: 0 0.4rem 0.8rem;
+	}
+}
+
+@media (max-width: 1024px) {
+	.grid-view-item {
+		margin: 0 0.41rem 0.82rem;
+	}
+	.grid-view-item__details-btn {
+		margin-top: 0.5rem;
+		padding: 0.3rem 0;
+	}
+}
+
+@media (max-width: 768px) {
+	.grid-view {
+		justify-content: space-between;
+	}
+	.grid-view-item {
+		min-width: 47%;
+		margin: 0 0.35rem 1.5rem;
+	}
+}
+
+@media (max-width: 425px) {
+	.grid-view-item {
+		min-width: 100%;
+		margin: 0 0 0.5rem;
+	}
 }
