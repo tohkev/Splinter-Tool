@@ -66,7 +66,7 @@ function FilterMenu() {
 	return (
 		<aside className="filter-menu section-block">
 			<div className="filter-menu__section">
-				<h3>Filter</h3>
+				<h3>Filter by:</h3>
 			</div>
 			<form>
 				<div className="filter-menu__card filter-menu__section">

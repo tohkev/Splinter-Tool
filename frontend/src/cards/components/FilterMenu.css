@@ -1,5 +1,5 @@
 .filter-menu {
-	width: 13%;
+	width: 100%;
 }
 
 .filter-menu label {
@@ -18,13 +18,18 @@ input[type="number"] {
 	outline: none;
 }
 
-.filter-menu__heading {
-	margin-bottom: 0.5rem;
+.filter-menu__section {
+	padding: 1rem;
+	border-bottom: 2px solid rgb(238, 238, 238);
 }
 
-.filter-menu__section {
-	padding: 1.5rem 1.5rem;
-	border-bottom: 2px solid rgb(238, 238, 238);
+.filter-menu__section h3 {
+	font-size: 1.5rem;
+}
+
+.filter-menu__heading {
+	margin-bottom: 0.5rem;
+	font-size: 1.25rem;
 }
 
 .filter-menu__text-field {
@@ -56,8 +61,18 @@ input[type="number"] {
 .filter-inputs__criteria {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 
 .filter-inputs__selection {
 	display: flex;
+	align-items: center;
+}
+
+.filter-inputs__selection input {
+	margin-right: 0.5rem;
+}
+
+.filter-inputs__count {
+	margin: 0;
 }
