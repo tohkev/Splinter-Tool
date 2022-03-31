@@ -3,7 +3,9 @@ import { BrowserRouter, Route, Navigate, Routes } from "react-router-dom";
 
 import MainNav from "./UIElements/Navigation/MainNav";
 import CardList from "./cards/components/CardList";
+import UserCollectionStats from "./cards/components/UserCollectionStats";
 import UserCards from "./cards/pages/UserCards";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 function App() {
@@ -19,6 +21,7 @@ function App() {
 	return (
 		<BrowserRouter>
 			<MainNav />
+			<UserCollectionStats />
 			{routes}
 		</BrowserRouter>
 	);
