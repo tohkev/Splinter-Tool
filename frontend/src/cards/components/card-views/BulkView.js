@@ -436,15 +436,15 @@ function BulkView(props) {
 			<table className="bulk-view">
 				<thead className="bottom-divider">
 					<tr>
-						<th className="py-3">Select</th>
-						<th className="w-25">Card Name</th>
-						<th className="w-15">Details</th>
-						<th>Level</th>
-						<th>BCX</th>
-						<th className="w-5">CP</th>
-						<th className="w-10">Owner</th>
-						<th className="w-10">Playable by:</th>
-						<th>Listed Price</th>
+						<th className="py-3 min-w-3">Select</th>
+						<th className="w-25 min-w-15">Card Name</th>
+						<th className="w-15 min-w-10">Details</th>
+						<th className="min-w-3">Level</th>
+						<th className="min-w-3">BCX</th>
+						<th className="min-w-3">CP</th>
+						<th className="w-10 min-w-5">Owner</th>
+						<th className="w-10 min-w-5">Playable by:</th>
+						<th className="min-w-7">Listed Price</th>
 					</tr>
 				</thead>
 				<tbody>{bulkItemList}</tbody>

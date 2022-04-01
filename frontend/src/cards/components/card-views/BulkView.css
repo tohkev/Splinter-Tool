@@ -32,6 +32,11 @@ tr {
 	margin-left: 0.4rem;
 }
 
+bulk-view__card-details {
+	display: flex;
+	flex-wrap: wrap;
+}
+
 .bulk-view__image-container {
 	height: 2.5rem;
 	overflow: hidden;
@@ -39,4 +44,17 @@ tr {
 
 .bulk-view__card-img {
 	height: 3.5rem;
+}
+
+@media (max-width: 900px) {
+	.card-list {
+		overflow-x: auto;
+		white-space: nowrap;
+	}
+}
+
+@media (max-width: 768px) {
+	.bulk-view__card-img {
+		display: none;
+	}
 }

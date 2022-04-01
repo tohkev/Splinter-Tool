@@ -19,7 +19,7 @@ function BulkViewItem(props) {
 					<p>{props.cardId}</p>
 				</div>
 			</td>
-			<td>{props.details}</td>
+			<td className="bulk-view__card-details">{props.details}</td>
 			<td>{props.level}</td>
 			<td>{props.bcx}</td>
 			<td>{props.cp}</td>
