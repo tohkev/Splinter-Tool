@@ -432,12 +432,10 @@ function GridView(props) {
 	});
 
 	return (
-		<main className="card-list">
-			<div className="grid-view">
-				{gridItemList}
-				<div className="filler"></div>
-			</div>
-		</main>
+		<div className="grid-view">
+			{gridItemList}
+			<div className="filler"></div>
+		</div>
 	);
 }
 

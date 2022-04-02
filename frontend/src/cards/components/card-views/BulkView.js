@@ -432,7 +432,6 @@ function BulkView(props) {
 	});
 
 	return (
-		<main className="card-list section-block">
 			<table className="bulk-view">
 				<thead className="bottom-divider">
 					<tr>
@@ -449,7 +448,6 @@ function BulkView(props) {
 				</thead>
 				<tbody>{bulkItemList}</tbody>
 			</table>
-		</main>
 	);
 }
 
