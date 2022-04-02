@@ -19,33 +19,29 @@ function GridViewItem(props) {
 				<div className="grid-view-item__card-info">
 					<div className="grid-view-item_card-info_container">
 						<div className="grid-view-item__category bottom-divider">
-							<p className="grid-view-item__count">
+							<p className="view-item__count">
 								<span>{props.numOwned} </span>/
 								<span> {props.numAvailable}</span>
 							</p>
-							<p className="grid-view-item__data">
-								Owned / Available
-							</p>
+							<p className="view-item__data">Owned / Available</p>
 						</div>
-						<div className="grid-view-item__category bottom-divider">
-							<p className="grid-view-item__count">
+						<div className="view-item__category bottom-divider">
+							<p className="view-item__count">
 								<span>{props.numForSale} </span>/
 								<span> {props.numForRent}</span>
 							</p>
-							<p className="grid-view-item__data">
+							<p className="view-item__data">
 								For Sale / For Rent
 							</p>
 						</div>
-						<div className="grid-view-item__category">
-							<p className="grid-view-item__count">
+						<div className="view-item__category">
+							<p className="view-item__count">
 								<span>${props.lowestCardPrice}</span> /
 								<span> ${props.lowestBcxPrice}</span>
 							</p>
-							<p className="grid-view-item__data">
-								Floor / per BCX
-							</p>
+							<p className="view-item__data">Floor / per BCX</p>
 						</div>
-						<button className="grid-view-item__details-btn">
+						<button className="view-item__details-btn">
 							View Details
 						</button>
 					</div>

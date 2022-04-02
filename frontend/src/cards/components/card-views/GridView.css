@@ -61,25 +61,6 @@
 	text-align: center;
 }
 
-.grid-view-item__category {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-	width: 80%;
-}
-
-.grid-view-item__details-btn {
-	width: 50%;
-	background-color: rgb(153, 0, 0);
-	color: white;
-	font-size: 0.85rem;
-	font-weight: 600;
-	padding: 0.5rem 0;
-	border: none;
-	cursor: pointer;
-	border-radius: 4px;
-}
-
 @media (max-width: 1440px) {
 	.grid-view-item {
 		min-width: 32%;
