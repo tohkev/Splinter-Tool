@@ -1,0 +1,50 @@
+.list-view {
+	width: 100%;
+}
+
+.list-view-item {
+	width: 100%;
+	display: flex;
+	margin-bottom: 1rem;
+}
+
+.list-view-container {
+	padding: 0.5rem;
+}
+
+.list-view-item__image-container {
+	width: 20%;
+}
+
+.list-view-item__card-image {
+	width: 100%;
+}
+
+.list-view-item__card-info-container {
+	min-width: 15%;
+	display: flex;
+	flex-direction: column;
+}
+
+.list-view-item__card-info-container li {
+	list-style: none;
+}
+
+.list-view-item__card-info-block {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+
+.list-view-item__card-level-stats {
+	min-width: 60%;
+}
+
+.list-view-item__market-stats-container {
+	min-width: 15%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+}
