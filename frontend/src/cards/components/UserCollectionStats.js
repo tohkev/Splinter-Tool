@@ -22,23 +22,29 @@ function UserCollectionStats(props) {
 					<div className="user-stats__view-options">
 						<input
 							type="radio"
-							value="bulk"
+							value="bulkView"
 							name="view-mode"
 							id="bulk"
+							onChange={props.viewBulk}
+							checked={props.viewMode === "bulkView"}
 						/>
 						<label htmlFor="bulk">Bulk</label>
 						<input
 							type="radio"
 							name="view-mode"
 							id="grid"
-							value="grid"
+							value="gridView"
+							onChange={props.viewGrid}
+							checked={props.viewMode === "gridView"}
 						/>
 						<label htmlFor="grid">Grid</label>
 						<input
 							type="radio"
 							name="view-mode"
 							id="list"
-							value="list"
+							value="listView"
+							onChange={props.viewList}
+							checked={props.viewMode === "listView"}
 						/>
 						<label htmlFor="list">List</label>
 					</div>
