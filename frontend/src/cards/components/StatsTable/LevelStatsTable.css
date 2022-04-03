@@ -1,3 +1,22 @@
 .level-stats-table {
 	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+.level-stats-table__header {
+	position: sticky;
+	top: 0;
+	bottom: 0;
+	box-shadow: inset 0 -1px 0 rgb(211, 211, 211);
+	background: white;
+	z-index: 5;
+}
+
+.level-stats-table__header th {
+	padding: 0.2rem 0;
+}
+
+.level-stats-table tbody tr:nth-of-type(odd) {
+	background-color: rgb(255, 241, 241);
 }

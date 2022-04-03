@@ -14,17 +14,17 @@ function ListViewItem(props) {
 			</div>
 			<div className="list-view-item__card-info-container list-view-container">
 				<div className="list-view-item__card-info-block">
-					<h4>Card Name</h4>
-					<p>Card Icons</p>
+					<h4>{props.name}</h4>
+					<p>{props.details}</p>
 				</div>
 				<ul>
-					<li>Total Circulation:</li>
-					<li>Total Cards:</li>
-					<li>On the Market:</li>
+					<li>Total Circulation: {props.totalCirculation}</li>
+					<li>Total Cards: {props.totalCards}</li>
+					<li>On the Market: {props.onTheMarket}</li>
 				</ul>
 			</div>
-			<div className="list-view-item__card-level-stats list-view-container">
-				<LevelStatsTable />
+			<div className="list-view-item__card-level-stats">
+				<LevelStatsTable uid={props.uid} />
 			</div>
 			<div className="list-view-item__market-stats-container list-view-container">
 				<div className="view-item__category bottom-divider">
