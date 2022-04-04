@@ -1,7 +1,22 @@
-.bottom-divider {
-	border-bottom: 2px solid gray;
+.card-list {
+	width: 100%;
 }
 
-.card-list {
-	width: 86%;
+.view-item__category {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	width: 80%;
+}
+
+.view-item__details-btn {
+	width: 50%;
+	background-color: rgb(153, 0, 0);
+	color: white;
+	font-size: 0.85rem;
+	font-weight: 600;
+	padding: 0.5rem 0;
+	border: none;
+	cursor: pointer;
+	border-radius: 4px;
 }
