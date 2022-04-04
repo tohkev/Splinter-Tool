@@ -1,6 +1,5 @@
 import React from "react";
 
-import CardItem from "../components/CardItem";
 import BulkView from "./card-views/BulkView";
 import GridView from "./card-views/GridView";
 import ListView from "./card-views/ListView";

@@ -1,5 +1,4 @@
 import React from "react";
-import { Col, Card, Row } from "react-bootstrap";
 
 function GridViewItem(props) {
 	return (

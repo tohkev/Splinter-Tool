@@ -1,5 +1,4 @@
 import React from "react";
-import { CardGroup, Row } from "react-bootstrap";
 
 import "./GridView.css";
 import GridViewItem from "./view-items/GridViewItem";
