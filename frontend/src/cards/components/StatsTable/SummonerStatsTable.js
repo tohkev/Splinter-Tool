@@ -45,10 +45,10 @@ function SummonerStatsTable(props) {
 				monster={props.monster}
 				level={i + 1}
 				mana={props.mana}
-				common={summonerStats[props.rarity].common[0]}
-				rare={summonerStats[props.rarity].rare[0]}
-				epic={summonerStats[props.rarity].epic[0]}
-				legendary={summonerStats[props.rarity].legendary[0]}
+				common={summonerStats[props.rarity].common[i]}
+				rare={summonerStats[props.rarity].rare[i]}
+				epic={summonerStats[props.rarity].epic[i]}
+				legendary={summonerStats[props.rarity].legendary[i]}
 				abilities={props.abilities}
 			/>
 		);
