@@ -3,10 +3,11 @@ tr > td {
 	text-align: center;
 }
 
-bulk-view tr > th:nth-of-type(2) {
+.bulk-view tr > th:nth-of-type(2) {
 	padding: 0.25rem 1rem;
 	text-align: start;
 }
+
 thead,
 tr {
 	width: 100%;
