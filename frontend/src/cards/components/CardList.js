@@ -7,13 +7,18 @@ import "./CardList.css";
 
 function CardList(props) {
 	if (props.viewMode === "bulkView") {
-		return <BulkView />;
+		return (
+			<BulkView
+				userCards={props.userCards}
+				cardDatabase={props.cardDatabase}
+			/>
+		);
 	} else if (props.viewMode === "gridView") {
 		return <GridView />;
 	} else if (props.viewMode === "listView") {
 		return <ListView />;
 	} else {
-		return <h1>Error showing cards!</h1>;
+		return <h3>Error showing cards!</h3>;
 	}
 }
 
