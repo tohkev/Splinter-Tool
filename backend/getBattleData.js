@@ -1,5 +1,6 @@
-import fetch from "node-fetch";
-import fs from "fs";
+const fetch = require("node-fetch");
+const fs = require("fs");
+const targetUsers = require("./targetUsers.js");
 
 async function getBattleHistory(player = "") {
 	const battleHistory = await fetch(
@@ -17,7 +18,13 @@ async function getBattleHistory(player = "") {
 		.catch((error) => {
 			console.error("Error with fetching data", error);
 		});
-	return battleHistory.battles;
+	return battleHistory.battles.filter((battle) => isRecentBattle(battle));
+}
+
+function isRecentBattle(battle) {
+	const now = new Date();
+	const compare = new Date(battle.created_date);
+	return Math.abs(now - compare) / (1000 * 60 * 60) <= 24;
 }
 
 function getBattleInfo(battle) {
@@ -74,49 +81,6 @@ function getMonsterInfo(team) {
 	};
 }
 
-let targetUsers = [
-	"snud",
-	"jytjyt",
-	"valjeanlemaire",
-	"gloomster",
-	"krympton",
-	"arick-the-red",
-	"mmcxor",
-	"rhyn",
-	"mukz177",
-	"parzzival",
-	"fullpwr",
-	"danderlion",
-	"naive-god",
-	"jsynnthagr8",
-	"macfillet",
-	"viru5",
-	"ghettomozart",
-	"snowfear",
-	"vegoose",
-	"runursht",
-	"jayvee72",
-	"draconiis72",
-	"bronko",
-	"highhaschdi",
-	"samji",
-	"gioviker",
-	"xatosh91",
-	"he-bro",
-	"hoshikinsei",
-	"kainzar",
-	"spjin",
-	"crootin",
-	"tt88",
-	"phantom786",
-	"tom-riddle",
-	"macfillet",
-	"xaintz",
-	"choonie",
-	"knightriver",
-	"appbap",
-	"smell-my-finger",
-];
 let battlesList = [];
 const battles = targetUsers.map((user) => {
 	return getBattleHistory(user)
