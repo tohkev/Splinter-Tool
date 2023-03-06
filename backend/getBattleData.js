@@ -1,6 +1,7 @@
 const fetch = require("node-fetch");
 const fs = require("fs");
 const targetUsers = require("./targetUsers.js");
+const schedule = require("node-schedule");
 
 async function getBattleHistory(player = "") {
 	const battleHistory = await fetch(
@@ -8,6 +9,7 @@ async function getBattleHistory(player = "") {
 	)
 		.then((response) => {
 			if (!response.ok) {
+				console.log(response);
 				throw new Error("Error in Network Response");
 			}
 			return response;
@@ -81,64 +83,84 @@ function getMonsterInfo(team) {
 	};
 }
 
-let battlesList = [];
-const battles = targetUsers.map((user) => {
-	return getBattleHistory(user)
-		.then((battles) =>
-			battles.map((battle) => {
-				const details = JSON.parse(battle.details);
-				if (details.type != "Surrender") {
-					if (battle.winner) {
-						const battleInfo = getBattleInfo(battle);
-						const monsterDetails1 = getMonsterInfo(details.team1);
-						const monsterDetails2 = getMonsterInfo(details.team2);
-						if (battle.winner == battle.player_1) {
-							return [
-								{
-									...battleInfo,
-									...monsterDetails1,
-									battle_queue_id: battle.battle_queue_id_1,
-									winner: true,
-								},
-								{
-									...battleInfo,
-									...monsterDetails2,
-									battle_queue_id: battle.battle_queue_id_2,
-									winner: false,
-								},
-							];
-						} else if (battle.winner == battle.player_2) {
-							return [
-								{
-									...battleInfo,
-									...monsterDetails2,
-									battle_queue_id: battle.battle_queue_id_2,
-									winner: true,
-								},
-								{
-									...battleInfo,
-									...monsterDetails1,
-									battle_queue_id: battle.battle_queue_id_1,
-									winner: false,
-								},
-							];
+function runGetBattleData(num) {
+	let battlesList = [];
+	const battles = targetUsers.map((user) => {
+		return getBattleHistory(user)
+			.then((battles) =>
+				battles.map((battle) => {
+					const details = JSON.parse(battle.details);
+					if (details.type != "Surrender") {
+						if (battle.winner) {
+							const battleInfo = getBattleInfo(battle);
+							const monsterDetails1 = getMonsterInfo(
+								details.team1
+							);
+							const monsterDetails2 = getMonsterInfo(
+								details.team2
+							);
+							if (battle.winner == battle.player_1) {
+								return [
+									{
+										...battleInfo,
+										...monsterDetails1,
+										battle_queue_id:
+											battle.battle_queue_id_1,
+										winner: true,
+									},
+									{
+										...battleInfo,
+										...monsterDetails2,
+										battle_queue_id:
+											battle.battle_queue_id_2,
+										winner: false,
+									},
+								];
+							} else if (battle.winner == battle.player_2) {
+								return [
+									{
+										...battleInfo,
+										...monsterDetails2,
+										battle_queue_id:
+											battle.battle_queue_id_2,
+										winner: true,
+									},
+									{
+										...battleInfo,
+										...monsterDetails1,
+										battle_queue_id:
+											battle.battle_queue_id_1,
+										winner: false,
+									},
+								];
+							}
 						}
 					}
-				}
-			})
-		)
-		.then((data) => (battlesList = [...battlesList, ...data]));
-});
+				})
+			)
+			.then((data) => (battlesList = [...battlesList, ...data]));
+	});
 
-Promise.all(battles).then(() => {
-	const cleanBattleList = battlesList.filter((x) => x != undefined);
-	fs.writeFile(
-		"data/history.json",
-		JSON.stringify(cleanBattleList),
-		function (err) {
-			if (err) {
-				console.log(err);
+	Promise.all(battles).then(() => {
+		const cleanBattleList = battlesList.filter((x) => x != undefined);
+		fs.writeFile(
+			`data/history${num}.json`,
+			JSON.stringify(cleanBattleList),
+			function (err) {
+				if (err) {
+					console.log(err);
+				}
 			}
-		}
-	);
-});
+		);
+	});
+}
+
+runGetBattleData();
+
+// const rule = new schedule.RecurrenceRule();
+// rule.hour = 21;
+// rule.minute = 20;
+
+// const job = schedule.scheduleJob(rule, function () {
+// 	runGetBattleData(`${new Date().getMonth()}${new Date().getDate()}`);
+// });
